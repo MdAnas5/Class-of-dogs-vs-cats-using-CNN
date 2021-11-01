@@ -16,10 +16,7 @@ In this Section we are implementing Convolution Neural Network(CNN) Classifier f
 * Numpy
 
 #### Test Train Split
-Image training set contain 12500 images for each category. I split those into 80% train and 20% means test Split each class images into 10,000 for train and 2,500 for test. 
-
-### Architecture
-![image](resources/images/architecture.jpg)
+Image training set contain 12500 images for each category. I split those into 80% train and 20% means test Split each class images into 10,000 for train and 2,500 for test.
 
 
 ```python
@@ -149,11 +146,6 @@ plt.imshow(img1)
 plt.show()
 
 ```
-
-
-![png](resources/images/output_10_0.png)
-
-
 
 ```python
 import pandas as pd
@@ -286,10 +278,6 @@ plt.ylabel('true value');
 ```
 
 
-![png](resources/images/output_14_0.png)
-
-
-
 ```python
 #Some of Cat image misclassified as Dog.
 import matplotlib.image as mpimg
@@ -308,11 +296,6 @@ plt.show()
 
 ```
 
-
-![png](resources/images/output_15_0.png)
-
-
-
 ```python
 #Some of Dog image misclassified as Cat.
 import matplotlib.image as mpimg
@@ -329,10 +312,6 @@ for i in range(columns*rows):
 plt.show()
 
 ```
-
-
-![png](resources/images/output_16_0.png)
-
 
 
 ```python
@@ -378,11 +357,6 @@ img = np.expand_dims(img, axis=0)
 
 ```
 
-
-![png](resources/images/output_19_0.png)
-
-
-
 ```python
 model_layers = [ layer.name for layer in classifier.layers]
 print('layer name : ',model_layers)
@@ -423,11 +397,6 @@ plt.imshow(conv2d_6_features[0, :, :, 4], cmap='gray')
     <matplotlib.image.AxesImage at 0x7f3b1c90f978>
 
 
-
-
-![png](resources/images/output_24_1.png)
-
-
 ### First Covolution Layer Output
 
 
@@ -446,10 +415,6 @@ for i in range(columns*rows):
 plt.show()
 ```
 
-
-![png](resources/images/output_26_0.png)
-
-
 ### Second Covolution Layer Output
 
 
@@ -465,10 +430,6 @@ for i in range(columns*rows):
     plt.imshow(conv2d_7_features[0, :, :, i], cmap='gray')
 plt.show()
 ```
-
-
-![png](resources/images/output_28_0.png)
-
 
 ### Model Performance on Unseen Data
 
@@ -496,10 +457,6 @@ for i in range(columns*rows):
     plt.imshow(img1)
 
 ```
-
-
-![png](resources/images/output_30_0.png)
-
 
 
 ```python
