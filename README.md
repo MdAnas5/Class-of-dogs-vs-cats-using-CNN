@@ -51,7 +51,6 @@ classifier.add(Dense(units=128,activation='relu'))
 classifier.add(Dense(units=1,activation='sigmoid'))
 adam = tensorflow.keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
 classifier.compile(optimizer=adam,loss='binary_crossentropy',metrics=['accuracy'])
-#tensorboard = TensorBoard(log_dir="logs/{}".format(time()))
 ```
 
 ## Data Augmentation
